@@ -13,8 +13,8 @@ services:
       - /mnt/nextcloud/database/:/var/lib/mysql:z
     environment:
       - MYSQL_ROOT_PASSWORD=mlp09okn
-      - MYSQL_PASSWORD=zaq12wsx
-      - MYSQL_DATABASE=nextcloud
+      - MYSQL_PASSWORD=_db_password_
+      - MYSQL_DATABASE=_db_username_
       - MYSQL_USER=nextcloud
     networks:
       - net
@@ -30,8 +30,8 @@ services:
     volumes:
       - /mnt/nextcloud/application:/var/www/html:z
     environment:
-      - MYSQL_PASSWORD=zaq12wsx
-      - MYSQL_DATABASE=nextcloud
+      - MYSQL_PASSWORD=_db_password_
+      - MYSQL_DATABASE=_db_username_
       - MYSQL_USER=nextcloud
       - MYSQL_HOST=db
     networks:
